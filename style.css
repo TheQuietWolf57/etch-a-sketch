@@ -1,0 +1,39 @@
+/* center container on screen */
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+/* make container a flexbox*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 960px;
+    height: 980px; 
+    align-items: center;
+}
+/* make flex a flexbox
+// set flex width to 960px
+// turn flex wrap on
+// change justify-content to space evenly  */
+.flex {
+    display: flex;
+    width: 960px;
+    height: 960px; 
+    flex-wrap: wrap;
+
+}
+
+/* bind the box widths to 6.66% to limit it to 16 on a row*/
+.flex div {
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+/* define a class to turn the box's background black*/
+.black {
+    background-color: black;
+}
