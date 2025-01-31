@@ -35,7 +35,6 @@ function drawBoxes(squares) {
     const boxes = flex.querySelectorAll("div");
     // clear grid before each use
     boxes.forEach((box) => {
-        console.log("REMOVE BOXES");
         box.remove();
     });
 
@@ -46,10 +45,12 @@ function drawBoxes(squares) {
         let dimension = 960/squares + "px";
         box.style.width = dimension;
         box.style.height = dimension;
+        box.style.opacity += 0.1;
         // create a "hover" eventListener to change the background color of
             // a div when the mouse enters its borders   
         box.addEventListener("mouseenter", () => {
-            box.classList.add("black");
+            box.style.backgroundColor = "black";
+            box.style.opacity = parseFloat(box.style.opacity) + 0.1;
             });
         flex.appendChild(box);
     }
